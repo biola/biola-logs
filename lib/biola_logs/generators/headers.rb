@@ -6,7 +6,7 @@ module BiolaLogs
         if method_supported?
           h = {}
           h[:session_id] = session_id if session_id
-          h[:host] = host if host
+          h[:host_name] = host if host
           h[:request_id] = uuid if uuid
           h
         else

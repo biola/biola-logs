@@ -19,7 +19,7 @@ Biola Logs doesn't include PID and timestamp, so assuming you want those you'll 
 config.log_formatter = ::Logger::Formatter.new
 ```
 
-To log `session_id`, `request_id` (or uuid), and `host` you need to add the following custom variables to payload in your controller. The `Headers` generator will pull these custom variables out and add them to the hash passed to lograge's `custom_options` config method.
+To log `session_id`, `request_id` (or uuid), and `host_name` you need to add the following custom variables to payload in your controller. The `Headers` generator will pull these custom variables out and add them to the hash passed to lograge's `custom_options` config method.
 
 ```ruby
 # app/controllers/application_controller.rb
