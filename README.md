@@ -24,12 +24,7 @@ To log `session_id`, `request_id` (or uuid), and `host_name` you need to add the
 ```ruby
 # app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
-  def append_info_to_payload(payload)
-    super
-    payload[:session_id] = request.session_options[:id]
-    payload[:uuid] = request.uuid
-    payload[:host] = request.host
-  end
+  include BiolaLogs::ControllerExtensions if defined?(BiolaLogs::ControllerExtensions)
 end
 ```
 

@@ -1,4 +1,5 @@
 require 'lograge'
+require 'biola_logs/controller_extensions'
 require 'biola_logs/generators'
 require 'biola_logs/generators/base'
 require 'biola_logs/generators/headers'
